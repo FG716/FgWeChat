@@ -1,5 +1,6 @@
 package com.fg716.controller;
 
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,8 +21,8 @@ public class TestController {
 
 	@RequestMapping("/test")
 	public String test() {
-		Weixininfo weixininfo = ebeanServer.find(Weixininfo.class).findOne();
-		return weixininfo.getToken();
+		// Weixininfo weixininfo = ebeanServer.find(Weixininfo.class).findOne();
+		return "{\"test\":\"test\"}";
 
 	}
 }
